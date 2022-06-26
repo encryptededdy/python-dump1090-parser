@@ -35,3 +35,6 @@ def with_ident(aircraft, filtered = False):
         return list(filter(lambda ac: ac.ident and ac.ident.strip() and not any(x in ac.ident for x in filtered_idents), aircraft))
     else:
         return list(filter(lambda ac: ac.ident and ac.ident.strip(), aircraft))
+
+def in_sky_and_ident(aircraft):
+    return list(filter(lambda ac: ac.ident and ac.ident.strip() and ac.alt_baro != "ground" and ac.alt_baro != None, aircraft))
