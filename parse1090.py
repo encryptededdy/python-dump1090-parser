@@ -11,9 +11,11 @@ class Aircraft():
         self.type = type
         self.ident = flight
         self.alt_baro = alt_baro
+        self.squawk = squawk
         self.gs = gs
         self.track = track
         self.category = category
+        self.alt_geom = alt_geom
         self.lat = lat
         self.lon = lon
         self.seen = seen
